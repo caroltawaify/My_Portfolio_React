@@ -1,4 +1,10 @@
+// .container {
+//   height: 40vh;
+//   display: flex;
+// }
 .home-page {
+  height: 70vh;
+
   .text-zone {
     position: absolute;
     left: 10%;
@@ -9,7 +15,7 @@
   }
 
   h1 {
-    color: #fff;
+    color: var(--black);
     font-size: 56px;
     line-height: 53px;
     margin: 0;
@@ -19,7 +25,7 @@
     &:before {
       content: '<h1>';
       font-family: 'La Belle Aurore', cursive;
-      color: #ffd700;
+      color: var(--orange);
       font-size: 18px;
       position: absolute;
       margin-top: -40px;
@@ -30,7 +36,7 @@
     &:after {
       content: '<h1/>';
       font-family: 'La Belle Aurore', cursive;
-      color: #ffd700;
+      color: var(--orange);
       font-size: 18px;
       position: absolute;
       margin-top: 18px;
@@ -58,26 +64,57 @@
     letter-spacing: 3px;
     animation: fadeIn 1s 1.8s backwards;
   }
+  .s-button {
+    width: 9.5rem;
+    height: 2.5rem;
+    margin-top: 2rem;
+  } 
 
-  .flat-button {
-    color: #ffd700;
-    font-size: 13px;
-    font-weight: 400;
-    letter-spacing: 4px;
-    font-family: sans-serif;
-    text-decoration: none;
-    padding: 10px 18px;
-    border: 1px solid #ffd700;
-    margin-top: 25px;
-    float: left;
-    animation: fadeInAnimation 1s 1.8s backwards;
-    white-space: nowrap;
+  // .flat-button {
+  //   color: var(--orange);
+  //   font-size: 13px;
+  //   font-weight: 400;
+  //   letter-spacing: 4px;
+  //   font-family: sans-serif;
+  //   text-decoration: none;
+  //   padding: 10px 18px;
+  //   border: 1px solid var(--orange);
+  //   margin-top: 25px;
+  //   float: left;
+  //   animation: fadeInAnimation 1s 1.8s backwards;
+  //   white-space: nowrap;
 
-    &:hover {
-      background: #ffd700;
-      color: #333;
-    }
+  //   &:hover {
+  //     background: var(--orange);
+  //     color: #333;
+  //   }
+  // }
+}
+.blur {
+  position: absolute;
+  width: 22rem;
+  height: 14rem;
+  border-radius: 50%;
+  background: #edd0ff;
+  filter: blur(212px);
+  z-index: -9;
+  top: -18%;
+  left: 56%;
+  filter: blur(72px);
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    flex-direction: column;
+    gap: 7rem;
+    height: 64rem;
   }
+
+  // .i-right {
+  //   transform: scale(0.8);
+  //   left: -3rem;
+  // }
+
 }
 
 

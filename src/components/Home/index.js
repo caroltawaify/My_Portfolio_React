@@ -1,15 +1,16 @@
 import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
-import Loader from 'react-loaders'
+// import { Link } from 'react-router-dom'
 import AnimatedLetters from '../AnimatedLetters'
-import LogoTitle from '../../assets/images/logo-s.png'
-import Logo from './Logo'
+import Clogo from '../../assets/images/Clogo.png'
+// import Logo from './Logo'
 import './index.scss'
+import Resume from './resume.pdf';
+
 
 const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
 
-  const nameArray = ['l', 'o', 'b', 'o', 'd', 'a', 'n']
+  const nameArray = ['a', 'r', 'o', 'l']
   const jobArray = [
     'w',
     'e',
@@ -35,7 +36,7 @@ const Home = () => {
 
   return (
     <>
-      <div className="container home-page">
+      <div className="container home-page" id='Home'>
         <div className="text-zone">
           <h1>
             <span className={letterClass}>H</span>
@@ -44,7 +45,7 @@ const Home = () => {
             <span className={`${letterClass} _13`}>I</span>
             <span className={`${letterClass} _14`}>'m</span>
             <img
-              src={LogoTitle}
+              src={Clogo}
               alt="JavaScript Developer Name, Web Developer Name"
             />
             <AnimatedLetters
@@ -59,15 +60,29 @@ const Home = () => {
               idx={22}
             />
           </h1>
-          <h2>Front End Developer / JavaScript Expert / Youtuber</h2>
-          <Link to="/contact" className="flat-button">
+          <h2>Junior Full Stack Developer </h2>
+          <a href={Resume} download>
+          <button className="button s-button">Download CV</button>
+        </a>
+          {/* <Link to="/contact" className="flat-button">
             CONTACT ME
-          </Link>
+          </Link> */}
+          <div className="blur" style={{ background: "rgb(238 210 255)" }}></div>
+        <div
+          className="blur"
+          style={{
+            background: "#C1F5FF",
+            top: "17rem",
+            width: "21rem",
+            height: "11rem",
+            left: "-9rem",
+          }}
+        ></div>
+     
         </div>
-        <Logo />
+        {/* <Logo /> */}
       </div>
 
-      <Loader type="pacman" />
     </>
   )
 }
